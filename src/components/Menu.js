@@ -12,7 +12,7 @@ import {
 const Menu = () => {
   return (
     <Box id="menu" sx={{ backgroundColor: "#fff" }}>
-      {/* === Top Section with Text and Image === */}
+      {/* === Top Section with Image and Text === */}
       <Box
         sx={{
           py: { xs: 6, md: 10 },
@@ -22,11 +22,33 @@ const Menu = () => {
           <Grid
             container
             spacing={4}
-            direction={{ xs: "column", md: "row" }}
             justifyContent="center"
             alignItems="stretch"
           >
-            {/* Left: Text Card */}
+            {/* Left: Image Card */}
+            <Grid item xs={12} md={6}>
+              <Card
+                elevation={3}
+                sx={{
+                  borderRadius: 3,
+                  height: "100%",
+                  overflow: "hidden",
+                }}
+              >
+                <CardMedia
+                  component="img"
+                  src="menuu1.png"
+                  alt="Menu Highlight"
+                  sx={{
+                    width: "100%",
+                    height: { xs: 250, sm: 300, md: "100%" },
+                    objectFit: "cover",
+                  }}
+                />
+              </Card>
+            </Grid>
+
+            {/* Right: Text Card */}
             <Grid item xs={12} md={6}>
               <Card
                 elevation={3}
@@ -58,33 +80,10 @@ const Menu = () => {
                       lineHeight: 1.8,
                     }}
                   >
-                    At Lillies – The Boho Cafe, we believe great food brings people together. Whether it’s a cozy date night or a joyful gathering with friends, our menu has something for everyone. From spicy starters to indulgent main courses and handcrafted mocktails, each item is made with love. <br /><br />
-                    Every dish is prepared with passion and fresh ingredients. Whether you're here for a quick bite or a relaxing evening, we’ve got something delicious waiting for you.
+                    At Lillies – The Boho Cafe, we believe great food brings people together. Whether it’s a cozy date night or a joyful gathering with friends, our menu has something for everyone. From spicy starters to indulgent main courses and handcrafted mocktails, each item is made with love.
+                   
                   </Typography>
                 </CardContent>
-              </Card>
-            </Grid>
-
-            {/* Right: Image Card */}
-            <Grid item xs={12} md={6}>
-              <Card
-                elevation={3}
-                sx={{
-                  borderRadius: 3,
-                  height: "100%",
-                  overflow: "hidden",
-                }}
-              >
-                <CardMedia
-                  component="img"
-                  src="menuu1.png"
-                  alt="Menu Highlight"
-                  sx={{
-                    width: "100%",
-                    height: { xs: 250, sm: 300, md: "100%" },
-                    objectFit: "cover",
-                  }}
-                />
               </Card>
             </Grid>
           </Grid>
@@ -109,3 +108,4 @@ const Menu = () => {
 };
 
 export default Menu;
+

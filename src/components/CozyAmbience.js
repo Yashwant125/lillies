@@ -85,8 +85,8 @@ const CozyAmbience = () => {
                 >
                   Cosy Ambience – A Warm, Charming Atmosphere.
                   Our bistro also features an outdoor seating area where you can enjoy your meals in a relaxed and serene environment. It's the perfect place to unwind with your loved ones or catch up with friends over a cup of coffee or tea.
-                  We take pride in our exceptional customer service and our team is always ready to assist you with your orders and queries.
-                  We also offer online food delivery services via Swiggy and Zomato, so you can enjoy our delicious food from the comfort of your home.
+              
+                  
                 </Typography>
               </CardContent>
             </Card>

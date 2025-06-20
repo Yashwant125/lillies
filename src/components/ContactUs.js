@@ -82,7 +82,7 @@ const ContactUs = () => (
                   Our Email
                 </Typography>
                 <Typography>Email: contact@lilliescafe.in</Typography>
-                <Typography>Phone: +91 91000 76767</Typography>
+                <Typography>Phone: +91 81799 35093</Typography>
               </Box>
             </Grid>
 
@@ -91,8 +91,8 @@ const ContactUs = () => (
                 <Typography variant="subtitle1" fontWeight="bold">
                   Opening Hours
                 </Typography>
-                <Typography>Mon – Fri: 12 AM – 11 PM</Typography>
-                <Typography>Sat – Sun: 8:30 AM – 11 PM</Typography>
+                <Typography>Mon – Fri: 9:30 AM – 1 AM</Typography>
+                <Typography>Sat – Sun: 9:00 AM – 1 AM</Typography>
               </Box>
 
               <Box>

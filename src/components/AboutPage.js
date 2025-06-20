@@ -62,11 +62,7 @@ const AboutPage = () => {
                   Our Cafe is an elegant and cozy space that offers a warm and
                   inviting ambiance for all our guests. At Lillies Cafe, we are
                   committed to serving you the best food, mocktails, and
-                  experience. Our menu is carefully curated to offer a variety
-                  of dishes that cater to different tastes and preferences.
-                  From our delicious appetizers to our mouth-watering entrees
-                  and desserts, we ensure that every dish is prepared using
-                  fresh and high-quality ingredients.
+                  experience. 
                 </Typography>
               </CardContent>
             </Card>
