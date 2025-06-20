@@ -3,10 +3,10 @@ import {
   Box,
   Container,
   Typography,
-  Grid,
   Card,
   CardContent,
   CardMedia,
+  Grid,
 } from "@mui/material";
 
 const AboutPage = () => {
@@ -17,27 +17,35 @@ const AboutPage = () => {
         backgroundColor: "#fff",
         py: { xs: 6, md: 10 },
         minHeight: "100vh",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
       }}
     >
       <Container maxWidth="lg">
-        <Grid container spacing={4} columns={{ xs: 1, md: 3 }}>
-          {/* Left Card – Text */}
-          <Grid>
+        <Grid
+          container
+          spacing={4}
+          wrap="nowrap"
+          justifyContent="center"
+          alignItems="stretch"
+        >
+          {/* Left: Text Card */}
+          <Grid item>
             <Card
+              elevation={3}
               sx={{
-                height: "100%",
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "center",
                 borderRadius: 3,
-                boxShadow: 3,
-                px: 3,
+                px: 4,
                 py: 4,
+                width: 500,
+                textAlign: "center",
+                height: "100%",
               }}
             >
               <CardContent>
                 <Typography
-                  variant="h4"
+                  variant="h5"
                   sx={{
                     fontWeight: "bold",
                     fontFamily: "serif",
@@ -49,53 +57,41 @@ const AboutPage = () => {
                 </Typography>
                 <Typography
                   variant="body1"
-                  sx={{ color: "#555", fontSize: "1rem", lineHeight: 1.8 }}
+                  sx={{
+                    color: "#555",
+                    fontSize: "1rem",
+                    lineHeight: 1.8,
+                  }}
                 >
-                  A modern bistro offering cozy vibes and flavorful experiences.
-                  From hand-crafted meals to an open kitchen concept, we invite
-                  you to dine, relax, and enjoy.
+                  Welcome to Tiger Lily Bistro, your favorite bistro in town!
+                  Our bistro is an elegant and cozy space that offers a warm
+                  and inviting ambiance for all our guests. At Tiger Lily
+                  Bistro, we are committed to serving you the best food,
+                  mocktails, and experience. Our menu is carefully curated to
+                  offer a variety of dishes that cater to different tastes and
+                  preferences. From our delicious appetizers to our
+                  mouth-watering entrees and desserts, we ensure that every dish
+                  is prepared using fresh and high-quality ingredients.
                 </Typography>
               </CardContent>
             </Card>
           </Grid>
 
-          {/* Middle Card – Image */}
-          <Grid>
+          {/* Right: Image Card */}
+          <Grid item>
             <Card
+              elevation={3}
               sx={{
-                height: "100%",
                 borderRadius: 3,
-                boxShadow: 3,
+                width: 500,
+                height: "100%",
                 overflow: "hidden",
               }}
             >
               <CardMedia
                 component="img"
-                src="welcome1.png"
-                alt="Welcome Image 1"
-                sx={{
-                  width: "100%",
-                  height: "100%",
-                  objectFit: "cover",
-                }}
-              />
-            </Card>
-          </Grid>
-
-          {/* Right Card – Image */}
-          <Grid>
-            <Card
-              sx={{
-                height: "100%",
-                borderRadius: 3,
-                boxShadow: 3,
-                overflow: "hidden",
-              }}
-            >
-              <CardMedia
-                component="img"
-                src="welcome2.png"
-                alt="Welcome Image 2"
+                src="welcome.png"
+                alt="Welcome Collage"
                 sx={{
                   width: "100%",
                   height: "100%",

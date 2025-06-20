@@ -6,7 +6,11 @@ import {
   Box,
   Container,
 } from "@mui/material";
-import AboutPage from "./AboutPage";
+import AboutPage from "./AboutPage"; 
+import CozyAmbienceBanner from "./CozyAmbienceBanner";
+import CozyAmbience from "./CozyAmbience";
+import Menu from "./Menu";
+import MessageMissionVision from "./MessageMissionVision";
 
 const HomePage = () => {
   return (
@@ -29,7 +33,7 @@ const HomePage = () => {
             left: 0,
             width: "100%",
             height: "100%",
-            backgroundImage: 'url("bg.jpg")',
+            backgroundImage: 'url("main.png")',
             backgroundSize: "cover",
             backgroundPosition: "center",
             filter: "blur(2px)",
@@ -108,6 +112,10 @@ const HomePage = () => {
 
       {/* === About Section (from separate file) === */}
       <AboutPage />
+      <CozyAmbienceBanner />
+      <CozyAmbience />
+      <Menu />
+      <MessageMissionVision />
     </Box>
   );
 };
