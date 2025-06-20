@@ -11,7 +11,7 @@ import {
 
 const Menu = () => {
   return (
-    <Box id="menu" sx={{ backgroundColor: "#fff" }}>
+    <Box id="menu" sx={{ backgroundColor: "#000" }}>
       {/* === Top Section with Image and Text === */}
       <Box
         sx={{
@@ -58,6 +58,7 @@ const Menu = () => {
                   py: { xs: 3, sm: 4 },
                   textAlign: "center",
                   height: "100%",
+                  backgroundColor: "#121212", // optional for better contrast
                 }}
               >
                 <CardContent>
@@ -67,7 +68,7 @@ const Menu = () => {
                       fontWeight: "bold",
                       fontFamily: "serif",
                       mb: 2,
-                      color: "#000",
+                      color: "#fff",
                     }}
                   >
                     Our Favourites – Discover Our Menu
@@ -75,13 +76,15 @@ const Menu = () => {
                   <Typography
                     variant="body1"
                     sx={{
-                      color: "#555",
+                      color: "#ccc",
                       fontSize: "1rem",
                       lineHeight: 1.8,
                     }}
                   >
-                    At Lillies – The Boho Cafe, we believe great food brings people together. Whether it’s a cozy date night or a joyful gathering with friends, our menu has something for everyone. From spicy starters to indulgent main courses and handcrafted mocktails, each item is made with love.
-                   
+                    At Lillies – The Boho Cafe, we believe great food brings people together.
+                    Whether it’s a cozy date night or a joyful gathering with friends,
+                    our menu has something for everyone. From spicy starters to indulgent
+                    main courses and handcrafted mocktails, each item is made with love.
                   </Typography>
                 </CardContent>
               </Card>
@@ -108,4 +111,3 @@ const Menu = () => {
 };
 
 export default Menu;
-

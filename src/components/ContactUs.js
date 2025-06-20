@@ -16,7 +16,7 @@ const ContactUs = () => (
   <Box
     id="contact"
     sx={{
-      backgroundColor: "#fff",
+      backgroundColor: "#000", // dark background
       py: { xs: 8, md: 12 },
     }}
   >
@@ -28,7 +28,7 @@ const ContactUs = () => (
         </Typography>
         <Typography
           variant="h4"
-          sx={{ fontFamily: "serif", fontWeight: "bold" }}
+          sx={{ fontFamily: "serif", fontWeight: "bold", color: "#fff" }}
         >
           Contact Us
         </Typography>
@@ -49,7 +49,7 @@ const ContactUs = () => (
           <Grid container spacing={4}>
             <Grid item xs={12} sm={6}>
               <Box mb={4}>
-                <Typography variant="subtitle1" fontWeight="bold">
+                <Typography variant="subtitle1" fontWeight="bold" sx={{ color: "#fff" }}>
                   Our Address
                 </Typography>
                 <Typography
@@ -57,6 +57,7 @@ const ContactUs = () => (
                     mb: 1,
                     whiteSpace: "pre-line",
                     maxWidth: { xs: "100%", sm: 260 },
+                    color: "#ccc",
                   }}
                 >
                   Lillie’s – The Boho Cafe{"\n"}
@@ -67,7 +68,7 @@ const ContactUs = () => (
                   Telangana – 500033
                 </Typography>
                 <Link
-                  href="https://www.google.com/maps/dir//3rd+Floor+Terrace+-+Chhatwal's,+Nandi+Hills,+Rd+No.+51,+BNR+Hills,+BN+Reddy+Colony,+Rai+Durg,+Hyderabad,+Telangana+500033/@17.4252742,78.3126873,24222m/data=!3m1!1e3!4m8!4m7!1m0!1m5!1m1!1s0x3bcb9193cf7267f7:0xf77e89fd6076baae!2m2!1d78.3950891!2d17.4252911"
+                  href="https://www.google.com/maps/dir//3rd+Floor+Terrace+-+Chhatwal's,+Nandi+Hills,+Rd+No.+51,+BNR+Hills,+BN+Reddy+Colony,+Rai+Durg,+Hyderabad,+Telangana+500033"
                   target="_blank"
                   rel="noopener"
                   underline="hover"
@@ -78,25 +79,29 @@ const ContactUs = () => (
               </Box>
 
               <Box mb={4}>
-                <Typography variant="subtitle1" fontWeight="bold">
+                <Typography variant="subtitle1" fontWeight="bold" sx={{ color: "#fff" }}>
                   Our Email
                 </Typography>
-                <Typography>Email: contact@lilliescafe.in</Typography>
-                <Typography>Phone: +91 81799 35093</Typography>
+                <Typography sx={{ color: "#ccc" }}>
+                  Email: contact@lilliescafe.in
+                </Typography>
+                <Typography sx={{ color: "#ccc" }}>
+                  Phone: +91 81799 35093
+                </Typography>
               </Box>
             </Grid>
 
             <Grid item xs={12} sm={6}>
               <Box mb={4}>
-                <Typography variant="subtitle1" fontWeight="bold">
+                <Typography variant="subtitle1" fontWeight="bold" sx={{ color: "#fff" }}>
                   Opening Hours
                 </Typography>
-                <Typography>Mon – Fri: 9:30 AM – 1 AM</Typography>
-                <Typography>Sat – Sun: 9:00 AM – 1 AM</Typography>
+                <Typography sx={{ color: "#ccc" }}>Mon – Fri: 9:30 AM – 1 AM</Typography>
+                <Typography sx={{ color: "#ccc" }}>Sat – Sun: 9:00 AM – 1 AM</Typography>
               </Box>
 
               <Box>
-                <Typography variant="subtitle1" fontWeight="bold">
+                <Typography variant="subtitle1" fontWeight="bold" sx={{ color: "#fff" }}>
                   Follow Us
                 </Typography>
                 <Stack direction="row" spacing={1} mt={1}>

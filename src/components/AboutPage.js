@@ -14,7 +14,7 @@ const AboutPage = () => {
     <Box
       id="about"
       sx={{
-        backgroundColor: "#fff",
+        backgroundColor: "#000", // Black background
         py: { xs: 6, md: 10 },
       }}
     >
@@ -34,6 +34,7 @@ const AboutPage = () => {
                 px: { xs: 3, sm: 4 },
                 py: { xs: 3, sm: 4 },
                 height: "100%",
+                backgroundColor: "#121212", // dark card for contrast
               }}
             >
               <CardContent>
@@ -43,7 +44,7 @@ const AboutPage = () => {
                     fontWeight: "bold",
                     fontFamily: "serif",
                     mb: 2,
-                    color: "#000",
+                    color: "#fff", // white heading
                     textAlign: { xs: "center", md: "left" },
                   }}
                 >
@@ -52,7 +53,7 @@ const AboutPage = () => {
                 <Typography
                   variant="body1"
                   sx={{
-                    color: "#555",
+                    color: "#ccc", // light gray text
                     fontSize: "1rem",
                     lineHeight: 1.8,
                     textAlign: { xs: "center", md: "left" },

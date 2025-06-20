@@ -14,7 +14,7 @@ const CozyAmbience = () => {
     <Box
       id="ambience"
       sx={{
-        backgroundColor: "#fff",
+        backgroundColor: "#000", // Black background
         py: { xs: 6, md: 10 },
         minHeight: "100vh",
         display: "flex",
@@ -61,6 +61,7 @@ const CozyAmbience = () => {
                 py: 4,
                 textAlign: "center",
                 height: "100%",
+                backgroundColor: "#121212", // Dark card background
               }}
             >
               <CardContent>
@@ -70,7 +71,7 @@ const CozyAmbience = () => {
                     fontWeight: "bold",
                     fontFamily: "serif",
                     mb: 2,
-                    color: "#000",
+                    color: "#fff", // White heading
                   }}
                 >
                   Cozy Ambience
@@ -78,15 +79,13 @@ const CozyAmbience = () => {
                 <Typography
                   variant="body1"
                   sx={{
-                    color: "#555",
+                    color: "#ccc", // Light gray body text
                     fontSize: "1rem",
                     lineHeight: 1.8,
                   }}
                 >
                   Cosy Ambience – A Warm, Charming Atmosphere.
                   Our bistro also features an outdoor seating area where you can enjoy your meals in a relaxed and serene environment. It's the perfect place to unwind with your loved ones or catch up with friends over a cup of coffee or tea.
-              
-                  
                 </Typography>
               </CardContent>
             </Card>

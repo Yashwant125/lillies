@@ -35,7 +35,7 @@ const Testimonials = () => {
     <Box
       id="testimonials"
       sx={{
-        backgroundColor: "#fff7f0",
+        backgroundColor: "#000", // Changed to black
         py: { xs: 6, md: 10 },
         textAlign: "center",
       }}
@@ -47,14 +47,14 @@ const Testimonials = () => {
             fontWeight: "bold",
             fontFamily: "serif",
             mb: 1,
-            color: "#000",
+            color: "#fff", // Changed to white
           }}
         >
           Our Testimonials
         </Typography>
         <Typography
           variant="subtitle1"
-          sx={{ mb: 5, color: "#555", fontSize: "1.1rem" }}
+          sx={{ mb: 5, color: "#aaa", fontSize: "1.1rem" }}
         >
           People Say About Us
         </Typography>
@@ -77,7 +77,7 @@ const Testimonials = () => {
                   py: { xs: 4, sm: 5 },
                   borderRadius: 3,
                   textAlign: "center",
-                  backgroundColor: "#fff",
+                  backgroundColor: "#111", // Dark card background
                 }}
               >
                 <CardContent>
@@ -90,7 +90,7 @@ const Testimonials = () => {
                   <Typography
                     variant="body1"
                     sx={{
-                      color: "#444",
+                      color: "#ddd", // Light text
                       fontSize: "1rem",
                       fontStyle: "italic",
                       mb: 2,
@@ -100,7 +100,7 @@ const Testimonials = () => {
                   </Typography>
                   <Typography
                     variant="subtitle2"
-                    sx={{ color: "#888", fontWeight: 600 }}
+                    sx={{ color: "#999", fontWeight: 600 }}
                   >
                     — {t.name}
                   </Typography>

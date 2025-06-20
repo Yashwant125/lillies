@@ -13,7 +13,7 @@ const MessageSection = () => {
     <Box
       id="message"
       sx={{
-        backgroundColor: "#fff",
+        backgroundColor: "#000", // Changed to black
         py: { xs: 6, md: 10 },
         display: "flex",
         justifyContent: "center",
@@ -37,13 +37,14 @@ const MessageSection = () => {
                 borderRadius: 3,
                 textAlign: "center",
                 boxShadow: 3,
+                backgroundColor: "#111", // Optional: Dark card background
               }}
             >
               <CardContent>
-                <Typography variant="h6" fontWeight="bold" mb={2}>
+                <Typography variant="h6" fontWeight="bold" mb={2} color="#fff">
                   Our Message
                 </Typography>
-                <Typography variant="body2" color="text.secondary">
+                <Typography variant="body2" sx={{ color: "#ccc" }}>
                   At Lillies - The Boho Cafe, we welcome every guest with warmth.
                   Our space is crafted for moments of comfort, joy, and
                   delicious food.
@@ -62,13 +63,14 @@ const MessageSection = () => {
                 borderRadius: 3,
                 textAlign: "center",
                 boxShadow: 3,
+                backgroundColor: "#111",
               }}
             >
               <CardContent>
-                <Typography variant="h6" fontWeight="bold" mb={2}>
+                <Typography variant="h6" fontWeight="bold" mb={2} color="#fff">
                   Our Mission
                 </Typography>
-                <Typography variant="body2" color="text.secondary">
+                <Typography variant="body2" sx={{ color: "#ccc" }}>
                   To serve handcrafted meals with love, in an ambiance that feels
                   like home. We aim to create memorable dining experiences.
                 </Typography>
@@ -86,13 +88,14 @@ const MessageSection = () => {
                 borderRadius: 3,
                 textAlign: "center",
                 boxShadow: 3,
+                backgroundColor: "#111",
               }}
             >
               <CardContent>
-                <Typography variant="h6" fontWeight="bold" mb={2}>
+                <Typography variant="h6" fontWeight="bold" mb={2} color="#fff">
                   Our Vision
                 </Typography>
-                <Typography variant="body2" color="text.secondary">
+                <Typography variant="body2" sx={{ color: "#ccc" }}>
                   To become the most loved local cafe — where every meal inspires
                   smiles and every visit brings you back.
                 </Typography>

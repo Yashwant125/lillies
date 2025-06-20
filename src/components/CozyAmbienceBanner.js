@@ -10,6 +10,7 @@ const CozyAmbienceBanner = () => {
         width: "100%",
         height: { xs: 280, sm: 360, md: 500 },
         overflow: "hidden",
+        backgroundColor: "#000", // Black fallback
       }}
     >
       {/* Image */}
