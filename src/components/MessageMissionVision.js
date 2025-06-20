@@ -26,14 +26,12 @@ const MessageSection = () => {
           spacing={4}
           justifyContent="center"
           alignItems="stretch"
-          wrap="nowrap" // Ensures single row
         >
           {/* Our Message */}
-          <Grid item>
+          <Grid item xs={12} sm={6} md={4}>
             <Card
               sx={{
-                width: 300,
-                height: 250,
+                height: "100%",
                 px: 3,
                 py: 4,
                 borderRadius: 3,
@@ -46,20 +44,19 @@ const MessageSection = () => {
                   Our Message
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
-                  At Tiger Lily Bistro, we welcome every guest with warmth. Our
-                  space is crafted for moments of comfort, joy, and delicious
-                  food.
+                  At Lillies - The Boho Cafe, we welcome every guest with warmth.
+                  Our space is crafted for moments of comfort, joy, and
+                  delicious food.
                 </Typography>
               </CardContent>
             </Card>
           </Grid>
 
           {/* Our Mission */}
-          <Grid item>
+          <Grid item xs={12} sm={6} md={4}>
             <Card
               sx={{
-                width: 300,
-                height: 250,
+                height: "100%",
                 px: 3,
                 py: 4,
                 borderRadius: 3,
@@ -72,20 +69,18 @@ const MessageSection = () => {
                   Our Mission
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
-                  To serve handcrafted meals with love, in an ambiance that
-                  feels like home. We aim to create memorable dining
-                  experiences.
+                  To serve handcrafted meals with love, in an ambiance that feels
+                  like home. We aim to create memorable dining experiences.
                 </Typography>
               </CardContent>
             </Card>
           </Grid>
 
           {/* Our Vision */}
-          <Grid item>
+          <Grid item xs={12} sm={12} md={4}>
             <Card
               sx={{
-                width: 300,
-                height: 250,
+                height: "100%",
                 px: 3,
                 py: 4,
                 borderRadius: 3,
@@ -98,8 +93,8 @@ const MessageSection = () => {
                   Our Vision
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
-                  To become the most loved local bistro — where every meal
-                  inspires smiles and every visit brings you back.
+                  To become the most loved local cafe — where every meal inspires
+                  smiles and every visit brings you back.
                 </Typography>
               </CardContent>
             </Card>

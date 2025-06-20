@@ -16,28 +16,24 @@ const Menu = () => {
       <Box
         sx={{
           py: { xs: 6, md: 10 },
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
         }}
       >
         <Container maxWidth="lg">
           <Grid
             container
             spacing={4}
-            wrap="nowrap"
+            direction={{ xs: "column", md: "row" }}
             justifyContent="center"
             alignItems="stretch"
           >
             {/* Left: Text Card */}
-            <Grid item>
+            <Grid item xs={12} md={6}>
               <Card
                 elevation={3}
                 sx={{
                   borderRadius: 3,
-                  px: 4,
-                  py: 4,
-                  width: 500,
+                  px: { xs: 2, sm: 4 },
+                  py: { xs: 3, sm: 4 },
                   textAlign: "center",
                   height: "100%",
                 }}
@@ -62,25 +58,19 @@ const Menu = () => {
                       lineHeight: 1.8,
                     }}
                   >
-                    At Tiger Lily Bistro, we believe great food brings people
-                    together. Whether it’s a cozy date night or a joyful
-                    gathering with friends, our menu has something for everyone.
-                    From spicy starters to indulgent main courses and
-                    handcrafted mocktails, each item is made with love. Come
-                    explore our chef's specials and daily favorites — always
-                    fresh, always flavorful.
+                    At Lillies – The Boho Cafe, we believe great food brings people together. Whether it’s a cozy date night or a joyful gathering with friends, our menu has something for everyone. From spicy starters to indulgent main courses and handcrafted mocktails, each item is made with love. <br /><br />
+                    Every dish is prepared with passion and fresh ingredients. Whether you're here for a quick bite or a relaxing evening, we’ve got something delicious waiting for you.
                   </Typography>
                 </CardContent>
               </Card>
             </Grid>
 
             {/* Right: Image Card */}
-            <Grid item>
+            <Grid item xs={12} md={6}>
               <Card
                 elevation={3}
                 sx={{
                   borderRadius: 3,
-                  width: 500,
                   height: "100%",
                   overflow: "hidden",
                 }}
@@ -91,7 +81,7 @@ const Menu = () => {
                   alt="Menu Highlight"
                   sx={{
                     width: "100%",
-                    height: "100%",
+                    height: { xs: 250, sm: 300, md: "100%" },
                     objectFit: "cover",
                   }}
                 />
@@ -101,20 +91,19 @@ const Menu = () => {
         </Container>
       </Box>
 
-     {/* === Banner with 8 Food Images === */}
-   <Box
-  component="img"
-  src="foods.png"
-  alt="Menu Items Banner"
-  sx={{
-    width: "100%",
-    height: "auto",
-    maxHeight: "2000px",   // limit how big it grows
-    mt: 6,
-    display: "block",
-  }}
-/>
-
+      {/* === Banner with 8 Food Images === */}
+      <Box
+        component="img"
+        src="foods.png"
+        alt="Menu Items Banner"
+        sx={{
+          width: "100%",
+          height: "auto",
+          maxHeight: "2000px",
+          mt: 6,
+          display: "block",
+        }}
+      />
     </Box>
   );
 };

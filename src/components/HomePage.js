@@ -5,14 +5,42 @@ import {
   Button,
   Box,
   Container,
+  IconButton,
+  Drawer,
+  List,
+  ListItem,
+  ListItemText,
+  useMediaQuery,
 } from "@mui/material";
-import AboutPage from "./AboutPage"; 
+import MenuIcon from "@mui/icons-material/Menu";
+import { useTheme } from "@mui/material/styles";
+
+import AboutPage from "./AboutPage";
 import CozyAmbienceBanner from "./CozyAmbienceBanner";
 import CozyAmbience from "./CozyAmbience";
 import Menu from "./Menu";
 import MessageMissionVision from "./MessageMissionVision";
+import TestimonialsSection from "./TestimonialsSection";
+import ContactUs from "./ContactUs";
+import Footer from "./Footer";
+
+const navItems = [
+  { label: "HOME", target: "#home" },
+  { label: "ABOUT", target: "#about" },
+  { label: "MENU", target: "#menu" },
+  { label: "GALLERY", target: "#gallery" },
+  { label: "CONTACT", target: "#contact" },
+];
 
 const HomePage = () => {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
+  const [drawerOpen, setDrawerOpen] = React.useState(false);
+
+  const toggleDrawer = () => {
+    setDrawerOpen(!drawerOpen);
+  };
+
   return (
     <Box>
       {/* === Hero Section === */}
@@ -41,6 +69,7 @@ const HomePage = () => {
             zIndex: 0,
           }}
         />
+
         {/* Dark Overlay */}
         <Box
           sx={{
@@ -53,6 +82,7 @@ const HomePage = () => {
             zIndex: 1,
           }}
         />
+
         {/* Navbar */}
         <AppBar
           position="static"
@@ -62,28 +92,50 @@ const HomePage = () => {
         >
           <Toolbar sx={{ justifyContent: "space-between" }}>
             <Box component="img" src="final.png" alt="Logo" sx={{ height: 50 }} />
-            <Box>
-              {[
-                { label: "HOME", target: "#home" },
-                { label: "ABOUT", target: "#about" },
-                { label: "MENU", target: "#menu" },
-                { label: "GALLERY", target: "#gallery" },
-                { label: "CONTACT", target: "#contact" },
-              ].map((item) => (
-                <Button
-                  key={item.label}
-                  sx={{
-                    color: "#fff",
-                    fontWeight: "bold",
-                    fontSize: "0.9rem",
-                    mx: 1,
-                  }}
-                  href={item.target}
+            {isMobile ? (
+              <>
+                <IconButton
+                  edge="end"
+                  color="inherit"
+                  onClick={toggleDrawer}
+                  sx={{ color: "#fff" }}
                 >
-                  {item.label}
-                </Button>
-              ))}
-            </Box>
+                  <MenuIcon />
+                </IconButton>
+                <Drawer anchor="right" open={drawerOpen} onClose={toggleDrawer}>
+                  <List sx={{ width: 200 }}>
+                    {navItems.map((item) => (
+                      <ListItem
+                        button
+                        key={item.label}
+                        component="a"
+                        href={item.target}
+                        onClick={toggleDrawer}
+                      >
+                        <ListItemText primary={item.label} />
+                      </ListItem>
+                    ))}
+                  </List>
+                </Drawer>
+              </>
+            ) : (
+              <Box>
+                {navItems.map((item) => (
+                  <Button
+                    key={item.label}
+                    sx={{
+                      color: "#fff",
+                      fontWeight: "bold",
+                      fontSize: "0.9rem",
+                      mx: 1,
+                    }}
+                    href={item.target}
+                  >
+                    {item.label}
+                  </Button>
+                ))}
+              </Box>
+            )}
           </Toolbar>
         </AppBar>
 
@@ -110,12 +162,15 @@ const HomePage = () => {
         </Container>
       </Box>
 
-      {/* === About Section (from separate file) === */}
+      {/* === Sections === */}
       <AboutPage />
       <CozyAmbienceBanner />
       <CozyAmbience />
       <Menu />
       <MessageMissionVision />
+      <TestimonialsSection />
+      <ContactUs />
+      <Footer />
     </Box>
   );
 };

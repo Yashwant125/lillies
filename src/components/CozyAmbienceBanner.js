@@ -8,7 +8,7 @@ const CozyAmbienceBanner = () => {
       sx={{
         position: "relative",
         width: "100%",
-        height: { xs: "300px", md: "500px" },
+        height: { xs: 280, sm: 360, md: 500 },
         overflow: "hidden",
       }}
     >
@@ -29,7 +29,7 @@ const CozyAmbienceBanner = () => {
       <Box
         sx={{
           position: "absolute",
-          bottom: 20,
+          bottom: { xs: 16, md: 24 },
           left: 0,
           width: "100%",
           textAlign: "center",
@@ -38,10 +38,11 @@ const CozyAmbienceBanner = () => {
         <Typography
           variant="h4"
           sx={{
+            fontSize: { xs: "1.8rem", md: "2.5rem" },
             color: "#fff",
             fontWeight: "bold",
             fontFamily: "serif",
-            textShadow: "2px 2px 6px rgba(0,0,0,0.5)",
+            textShadow: "2px 2px 6px rgba(0,0,0,0.6)",
           }}
         >
           Cozy Ambience
