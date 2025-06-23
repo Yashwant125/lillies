@@ -7,24 +7,33 @@ const Footer = () => {
       component="footer"
       sx={{
         width: "100%",
-        bgcolor: "black",
-        color: "white",
+        bgcolor: "#000",
+        color: "#fff",
         py: { xs: 3, md: 4 },
         px: 2,
         textAlign: "center",
+        mt: 6,
       }}
     >
       <Typography
         variant="body2"
-        sx={{ mb: 0.5, fontSize: { xs: "0.85rem", md: "1rem" } }}
+        sx={{
+          fontSize: { xs: "0.9rem", sm: "1rem" },
+          fontWeight: 500,
+        }}
       >
-        ©2025 Lillies – The Boho Cafe
+        © 2025 Lillies – The Boho Cafe
       </Typography>
       <Typography
         variant="caption"
-        sx={{ color: "gray", fontSize: { xs: "0.75rem", md: "0.85rem" } }}
+        sx={{
+          display: "block",
+          mt: 1,
+          color: "#aaa",
+          fontSize: { xs: "0.75rem", sm: "0.85rem" },
+        }}
       >
-        Made with <span style={{ color: "red" }}>♥</span> by Yash
+        Made with <span style={{ color: "#e74c3c" }}>♥</span> by Yash
       </Typography>
     </Box>
   );

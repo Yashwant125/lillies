@@ -48,12 +48,12 @@ const HomePage = () => {
         id="home"
         sx={{
           position: "relative",
-          height: "100vh",
+          height: { xs: "100vh", md: "100vh" },
           width: "100%",
           overflow: "hidden",
         }}
       >
-        {/* Background */}
+        {/* Background Image */}
         <Box
           sx={{
             position: "absolute",
@@ -70,7 +70,7 @@ const HomePage = () => {
           }}
         />
 
-        {/* Dark Overlay */}
+        {/* Overlay */}
         <Box
           sx={{
             position: "absolute",
@@ -78,7 +78,7 @@ const HomePage = () => {
             left: 0,
             width: "100%",
             height: "100%",
-            backgroundColor: "rgba(0, 0, 0, 0.3)",
+            backgroundColor: "rgba(0, 0, 0, 0.4)",
             zIndex: 1,
           }}
         />
@@ -88,10 +88,19 @@ const HomePage = () => {
           position="static"
           color="transparent"
           elevation={0}
-          sx={{ background: "transparent", zIndex: 2 }}
+          sx={{
+            background: "transparent",
+            zIndex: 2,
+            px: { xs: 2, md: 4 },
+          }}
         >
           <Toolbar sx={{ justifyContent: "space-between" }}>
-            <Box component="img" src="final.png" alt="Logo" sx={{ height: 50 }} />
+            <Box
+              component="img"
+              src="final.png"
+              alt="Logo"
+              sx={{ height: { xs: 45, sm: 55 } }}
+            />
             {isMobile ? (
               <>
                 <IconButton
@@ -103,7 +112,7 @@ const HomePage = () => {
                   <MenuIcon />
                 </IconButton>
                 <Drawer anchor="right" open={drawerOpen} onClose={toggleDrawer}>
-                  <List sx={{ width: 200 }}>
+                  <List sx={{ width: 220 }}>
                     {navItems.map((item) => (
                       <ListItem
                         button
@@ -125,9 +134,12 @@ const HomePage = () => {
                     key={item.label}
                     sx={{
                       color: "#fff",
-                      fontWeight: "bold",
-                      fontSize: "0.9rem",
+                      fontWeight: 600,
+                      fontSize: "0.95rem",
                       mx: 1,
+                      "&:hover": {
+                        color: "#c7a36e",
+                      },
                     }}
                     href={item.target}
                   >
@@ -148,6 +160,7 @@ const HomePage = () => {
             justifyContent: "center",
             position: "relative",
             zIndex: 2,
+            textAlign: "center",
           }}
         >
           <Box
@@ -155,14 +168,14 @@ const HomePage = () => {
             src="final.png"
             alt="Center Logo"
             sx={{
-              width: { xs: "200px", md: "300px" },
-              mb: 2,
+              width: { xs: "180px", sm: "240px", md: "320px" },
+              maxWidth: "100%",
             }}
           />
         </Container>
       </Box>
 
-      {/* === Sections === */}
+      {/* === Page Sections === */}
       <AboutPage />
       <CozyAmbienceBanner />
       <CozyAmbience />

@@ -14,7 +14,7 @@ const CozyAmbience = () => {
     <Box
       id="ambience"
       sx={{
-        backgroundColor: "#000", // Black background
+        backgroundColor: "#000",
         py: { xs: 6, md: 10 },
         minHeight: "100vh",
         display: "flex",
@@ -26,7 +26,8 @@ const CozyAmbience = () => {
           container
           spacing={4}
           justifyContent="center"
-          alignItems="stretch"
+          alignItems="center"
+          direction={{ xs: "column", md: "row" }}
         >
           {/* Left: Image Card */}
           <Grid item xs={12} md={6}>
@@ -34,8 +35,8 @@ const CozyAmbience = () => {
               elevation={3}
               sx={{
                 borderRadius: 3,
-                height: "100%",
                 overflow: "hidden",
+                height: { xs: 250, sm: 350, md: 380 },
               }}
             >
               <CardMedia
@@ -44,7 +45,7 @@ const CozyAmbience = () => {
                 alt="Cozy Ambience"
                 sx={{
                   width: "100%",
-                  height: { xs: 250, sm: 400, md: "100%" },
+                  height: "100%",
                   objectFit: "cover",
                 }}
               />
@@ -57,11 +58,13 @@ const CozyAmbience = () => {
               elevation={3}
               sx={{
                 borderRadius: 3,
-                px: 4,
-                py: 4,
-                textAlign: "center",
+                px: { xs: 3, sm: 4, md: 5 },
+                py: { xs: 3, sm: 4, md: 5 },
+                backgroundColor: "#121212",
                 height: "100%",
-                backgroundColor: "#121212", // Dark card background
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "center",
               }}
             >
               <CardContent>
@@ -71,7 +74,9 @@ const CozyAmbience = () => {
                     fontWeight: "bold",
                     fontFamily: "serif",
                     mb: 2,
-                    color: "#fff", // White heading
+                    color: "#fff",
+                    textAlign: { xs: "center", md: "left" },
+                    fontSize: { xs: "1.5rem", md: "2rem" },
                   }}
                 >
                   Cozy Ambience
@@ -79,13 +84,17 @@ const CozyAmbience = () => {
                 <Typography
                   variant="body1"
                   sx={{
-                    color: "#ccc", // Light gray body text
-                    fontSize: "1rem",
+                    color: "#ccc",
+                    fontSize: { xs: "0.95rem", md: "1.05rem" },
                     lineHeight: 1.8,
+                    textAlign: { xs: "center", md: "left" },
                   }}
                 >
-                  Cosy Ambience – A Warm, Charming Atmosphere.
-                  Our bistro also features an outdoor seating area where you can enjoy your meals in a relaxed and serene environment. It's the perfect place to unwind with your loved ones or catch up with friends over a cup of coffee or tea.
+                  Cozy Ambience – A Warm, Charming Atmosphere. Our bistro also
+                  features an outdoor seating area where you can enjoy your
+                  meals in a relaxed and serene environment. It's the perfect
+                  place to unwind with your loved ones or catch up with friends
+                  over a cup of coffee or tea.
                 </Typography>
               </CardContent>
             </Card>

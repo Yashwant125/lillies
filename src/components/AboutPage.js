@@ -14,7 +14,7 @@ const AboutPage = () => {
     <Box
       id="about"
       sx={{
-        backgroundColor: "#000", // Black background
+        backgroundColor: "#000",
         py: { xs: 6, md: 10 },
       }}
     >
@@ -24,17 +24,18 @@ const AboutPage = () => {
           spacing={4}
           justifyContent="center"
           alignItems="center"
+          direction={{ xs: "column-reverse", md: "row" }}
         >
-          {/* Left: Text Card */}
+          {/* Left: Text */}
           <Grid item xs={12} md={6}>
             <Card
               elevation={3}
               sx={{
                 borderRadius: 3,
-                px: { xs: 3, sm: 4 },
-                py: { xs: 3, sm: 4 },
+                px: { xs: 2, sm: 3, md: 4 },
+                py: { xs: 3, sm: 4, md: 5 },
+                backgroundColor: "#121212",
                 height: "100%",
-                backgroundColor: "#121212", // dark card for contrast
               }}
             >
               <CardContent>
@@ -43,9 +44,10 @@ const AboutPage = () => {
                   sx={{
                     fontWeight: "bold",
                     fontFamily: "serif",
-                    mb: 2,
-                    color: "#fff", // white heading
+                    mb: { xs: 2, md: 3 },
+                    color: "#fff",
                     textAlign: { xs: "center", md: "left" },
+                    fontSize: { xs: "1.5rem", sm: "1.8rem", md: "2rem" },
                   }}
                 >
                   Welcome to Lillies - The Boho Cafe
@@ -53,30 +55,30 @@ const AboutPage = () => {
                 <Typography
                   variant="body1"
                   sx={{
-                    color: "#ccc", // light gray text
-                    fontSize: "1rem",
+                    color: "#ccc",
+                    fontSize: { xs: "0.95rem", sm: "1rem", md: "1.05rem" },
                     lineHeight: 1.8,
                     textAlign: { xs: "center", md: "left" },
                   }}
                 >
                   Welcome to Lillies - The Boho Cafe, your favorite cafe in town!
-                  Our Cafe is an elegant and cozy space that offers a warm and
+                  Our cafe is an elegant and cozy space that offers a warm and
                   inviting ambiance for all our guests. At Lillies Cafe, we are
                   committed to serving you the best food, mocktails, and
-                  experience. 
+                  experience.
                 </Typography>
               </CardContent>
             </Card>
           </Grid>
 
-          {/* Right: Image Card */}
+          {/* Right: Image */}
           <Grid item xs={12} md={6}>
             <Card
               elevation={3}
               sx={{
                 borderRadius: 3,
-                height: "100%",
                 overflow: "hidden",
+                height: "100%",
               }}
             >
               <CardMedia
@@ -85,7 +87,12 @@ const AboutPage = () => {
                 alt="Welcome Collage"
                 sx={{
                   width: "100%",
-                  height: { xs: 250, sm: 300, md: "100%" },
+                  height: {
+                    xs: 240,
+                    sm: 300,
+                    md: 340,
+                    lg: 380,
+                  },
                   objectFit: "cover",
                 }}
               />

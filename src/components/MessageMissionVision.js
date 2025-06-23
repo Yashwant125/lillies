@@ -13,11 +13,8 @@ const MessageSection = () => {
     <Box
       id="message"
       sx={{
-        backgroundColor: "#000", // Changed to black
+        backgroundColor: "#000", // Dark background
         py: { xs: 6, md: 10 },
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
       }}
     >
       <Container maxWidth="lg">
@@ -27,81 +24,60 @@ const MessageSection = () => {
           justifyContent="center"
           alignItems="stretch"
         >
-          {/* Our Message */}
-          <Grid item xs={12} sm={6} md={4}>
-            <Card
-              sx={{
-                height: "100%",
-                px: 3,
-                py: 4,
-                borderRadius: 3,
-                textAlign: "center",
-                boxShadow: 3,
-                backgroundColor: "#111", // Optional: Dark card background
-              }}
-            >
-              <CardContent>
-                <Typography variant="h6" fontWeight="bold" mb={2} color="#fff">
-                  Our Message
-                </Typography>
-                <Typography variant="body2" sx={{ color: "#ccc" }}>
-                  At Lillies - The Boho Cafe, we welcome every guest with warmth.
-                  Our space is crafted for moments of comfort, joy, and
-                  delicious food.
-                </Typography>
-              </CardContent>
-            </Card>
-          </Grid>
-
-          {/* Our Mission */}
-          <Grid item xs={12} sm={6} md={4}>
-            <Card
-              sx={{
-                height: "100%",
-                px: 3,
-                py: 4,
-                borderRadius: 3,
-                textAlign: "center",
-                boxShadow: 3,
-                backgroundColor: "#111",
-              }}
-            >
-              <CardContent>
-                <Typography variant="h6" fontWeight="bold" mb={2} color="#fff">
-                  Our Mission
-                </Typography>
-                <Typography variant="body2" sx={{ color: "#ccc" }}>
-                  To serve handcrafted meals with love, in an ambiance that feels
-                  like home. We aim to create memorable dining experiences.
-                </Typography>
-              </CardContent>
-            </Card>
-          </Grid>
-
-          {/* Our Vision */}
-          <Grid item xs={12} sm={12} md={4}>
-            <Card
-              sx={{
-                height: "100%",
-                px: 3,
-                py: 4,
-                borderRadius: 3,
-                textAlign: "center",
-                boxShadow: 3,
-                backgroundColor: "#111",
-              }}
-            >
-              <CardContent>
-                <Typography variant="h6" fontWeight="bold" mb={2} color="#fff">
-                  Our Vision
-                </Typography>
-                <Typography variant="body2" sx={{ color: "#ccc" }}>
-                  To become the most loved local cafe — where every meal inspires
-                  smiles and every visit brings you back.
-                </Typography>
-              </CardContent>
-            </Card>
-          </Grid>
+          {/* Reusable Card for each block */}
+          {[
+            {
+              title: "Our Message",
+              text: `At Lillies - The Boho Cafe, we welcome every guest with warmth.
+                Our space is crafted for moments of comfort, joy, and
+                delicious food.`,
+            },
+            {
+              title: "Our Mission",
+              text: `To serve handcrafted meals with love, in an ambiance that feels
+                like home. We aim to create memorable dining experiences.`,
+            },
+            {
+              title: "Our Vision",
+              text: `To become the most loved local cafe — where every meal inspires
+                smiles and every visit brings you back.`,
+            },
+          ].map((item, index) => (
+            <Grid item xs={12} sm={6} md={4} key={index}>
+              <Card
+                sx={{
+                  height: "100%",
+                  px: { xs: 2, sm: 3 },
+                  py: { xs: 3, sm: 4 },
+                  borderRadius: 3,
+                  textAlign: "center",
+                  boxShadow: 3,
+                  backgroundColor: "#111",
+                }}
+              >
+                <CardContent>
+                  <Typography
+                    variant="h6"
+                    fontWeight="bold"
+                    mb={2}
+                    sx={{ color: "#fff", fontSize: { xs: "1.1rem", md: "1.25rem" } }}
+                  >
+                    {item.title}
+                  </Typography>
+                  <Typography
+                    variant="body2"
+                    sx={{
+                      color: "#ccc",
+                      fontSize: { xs: "0.9rem", sm: "1rem" },
+                      lineHeight: 1.7,
+                    }}
+                  >
+                    {item.text}
+                  </Typography>
+                </CardContent>
+              </Card>
+            </Grid>
+          ))}
         </Grid>
       </Container>
     </Box>

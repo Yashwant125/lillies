@@ -4,16 +4,16 @@ import { Box, Typography } from "@mui/material";
 const CozyAmbienceBanner = () => {
   return (
     <Box
-      id="ambience"
+      id="ambience-banner"
       sx={{
         position: "relative",
         width: "100%",
-        height: { xs: 280, sm: 360, md: 500 },
+        height: { xs: 280, sm: 380, md: 500, lg: 600 },
         overflow: "hidden",
-        backgroundColor: "#000", // Black fallback
+        backgroundColor: "#000", // fallback background
       }}
     >
-      {/* Image */}
+      {/* Banner Image */}
       <Box
         component="img"
         src="main11.png"
@@ -26,24 +26,25 @@ const CozyAmbienceBanner = () => {
         }}
       />
 
-      {/* Bottom Overlay Text */}
+      {/* Overlay Text */}
       <Box
         sx={{
           position: "absolute",
-          bottom: { xs: 16, md: 24 },
+          bottom: { xs: 24, md: 40 },
           left: 0,
           width: "100%",
           textAlign: "center",
+          px: 2,
         }}
       >
         <Typography
           variant="h4"
           sx={{
-            fontSize: { xs: "1.8rem", md: "2.5rem" },
+            fontSize: { xs: "1.8rem", sm: "2rem", md: "2.7rem", lg: "3rem" },
             color: "#fff",
             fontWeight: "bold",
             fontFamily: "serif",
-            textShadow: "2px 2px 6px rgba(0,0,0,0.6)",
+            textShadow: "2px 2px 8px rgba(0,0,0,0.6)",
           }}
         >
           Cozy Ambience

@@ -35,7 +35,7 @@ const Testimonials = () => {
     <Box
       id="testimonials"
       sx={{
-        backgroundColor: "#000", // Changed to black
+        backgroundColor: "#000",
         py: { xs: 6, md: 10 },
         textAlign: "center",
       }}
@@ -47,14 +47,19 @@ const Testimonials = () => {
             fontWeight: "bold",
             fontFamily: "serif",
             mb: 1,
-            color: "#fff", // Changed to white
+            fontSize: { xs: "1.8rem", sm: "2rem", md: "2.5rem" },
+            color: "#fff",
           }}
         >
           Our Testimonials
         </Typography>
         <Typography
           variant="subtitle1"
-          sx={{ mb: 5, color: "#aaa", fontSize: "1.1rem" }}
+          sx={{
+            mb: 5,
+            color: "#aaa",
+            fontSize: { xs: "1rem", sm: "1.1rem" },
+          }}
         >
           People Say About Us
         </Typography>
@@ -73,11 +78,11 @@ const Testimonials = () => {
                 elevation={3}
                 sx={{
                   mx: "auto",
+                  maxWidth: 600,
                   px: { xs: 3, sm: 5 },
                   py: { xs: 4, sm: 5 },
                   borderRadius: 3,
-                  textAlign: "center",
-                  backgroundColor: "#111", // Dark card background
+                  backgroundColor: "#111",
                 }}
               >
                 <CardContent>
@@ -90,13 +95,14 @@ const Testimonials = () => {
                   <Typography
                     variant="body1"
                     sx={{
-                      color: "#ddd", // Light text
-                      fontSize: "1rem",
+                      color: "#ddd",
+                      fontSize: { xs: "0.95rem", sm: "1.05rem" },
                       fontStyle: "italic",
                       mb: 2,
+                      lineHeight: 1.6,
                     }}
                   >
-                    "{t.text}"
+                    “{t.text}”
                   </Typography>
                   <Typography
                     variant="subtitle2"
