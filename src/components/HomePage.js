@@ -2,14 +2,10 @@ import React from "react";
 import {
   AppBar,
   Toolbar,
-  Button,
   Box,
   Container,
   IconButton,
   Drawer,
-  List,
-  ListItem,
-  ListItemText,
   useMediaQuery,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
@@ -23,14 +19,6 @@ import MessageMissionVision from "./MessageMissionVision";
 import TestimonialsSection from "./TestimonialsSection";
 import ContactUs from "./ContactUs";
 import Footer from "./Footer";
-
-const navItems = [
-  { label: "HOME", target: "#home" },
-  { label: "ABOUT", target: "#about" },
-  { label: "MENU", target: "#menu" },
-  { label: "GALLERY", target: "#gallery" },
-  { label: "CONTACT", target: "#contact" },
-];
 
 const HomePage = () => {
   const theme = useTheme();
@@ -83,7 +71,7 @@ const HomePage = () => {
           }}
         />
 
-        {/* Navbar */}
+        {/* Navbar (only logo, no nav words) */}
         <AppBar
           position="static"
           color="transparent"
@@ -101,53 +89,19 @@ const HomePage = () => {
               alt="Logo"
               sx={{ height: { xs: 45, sm: 55 } }}
             />
-            {isMobile ? (
-              <>
-                <IconButton
-                  edge="end"
-                  color="inherit"
-                  onClick={toggleDrawer}
-                  sx={{ color: "#fff" }}
-                >
-                  <MenuIcon />
-                </IconButton>
-                <Drawer anchor="right" open={drawerOpen} onClose={toggleDrawer}>
-                  <List sx={{ width: 220 }}>
-                    {navItems.map((item) => (
-                      <ListItem
-                        button
-                        key={item.label}
-                        component="a"
-                        href={item.target}
-                        onClick={toggleDrawer}
-                      >
-                        <ListItemText primary={item.label} />
-                      </ListItem>
-                    ))}
-                  </List>
-                </Drawer>
-              </>
-            ) : (
-              <Box>
-                {navItems.map((item) => (
-                  <Button
-                    key={item.label}
-                    sx={{
-                      color: "#fff",
-                      fontWeight: 600,
-                      fontSize: "0.95rem",
-                      mx: 1,
-                      "&:hover": {
-                        color: "#c7a36e",
-                      },
-                    }}
-                    href={item.target}
-                  >
-                    {item.label}
-                  </Button>
-                ))}
-              </Box>
+
+            {isMobile && (
+              <IconButton
+                edge="end"
+                color="inherit"
+                onClick={toggleDrawer}
+                sx={{ color: "#fff" }}
+              >
+                <MenuIcon />
+              </IconButton>
             )}
+
+            <Drawer anchor="right" open={drawerOpen} onClose={toggleDrawer} />
           </Toolbar>
         </AppBar>
 
@@ -189,3 +143,4 @@ const HomePage = () => {
 };
 
 export default HomePage;
+
